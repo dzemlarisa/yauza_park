@@ -412,7 +412,7 @@ body {
     
     .partner-item {
         flex: 0 0 100%;
-        max-width: 100px;
+        max-width: 200px;
     }
     
     .footer-content {
