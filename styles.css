@@ -334,6 +334,123 @@ body {
     margin-bottom: 15px;
     font-size: 1.5rem;
 }
+.flats {
+    background-color: #abbae0;
+    padding: 60px 0;
+    position: relative;
+}
+
+.flats-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    padding-left: 0;
+    color: #454c52;
+}
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    background-color: #6c757d;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.filter-btn:hover {
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background-color: #28a74694;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.flats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flat-card {
+    background: #bfd0f1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.5s ease;
+    animation: fadeIn 0.5s ease-in-out forwards;
+    opacity: 0;
+
+}
+
+.flat-card.hidden {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.flat-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.flat-info {
+    padding: 20px;
+}
+
+.flat-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #495057;
+}
+
+.flat-description {
+    color: #6d7791;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.flat-rooms {
+    display: inline-block;
+    padding: 5px 12px;
+    background-color: #e9ecef;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #495057;
+    font-weight: bold;
+}
+
+.flat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.flat-card:nth-child(1) { animation-delay: 0.1s; }
+.flat-card:nth-child(2) { animation-delay: 0.2s; }
+.flat-card:nth-child(3) { animation-delay: 0.3s; }
+.flat-card:nth-child(4) { animation-delay: 0.4s; }
+.flat-card:nth-child(5) { animation-delay: 0.5s; }
+.flat-card:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 .footer {
     background-color: #778198;
@@ -413,6 +530,19 @@ body {
     .partner-item {
         flex: 0 0 100%;
         max-width: 200px;
+    }
+
+    .flats-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .filter-btn {
+        width: 200px;
     }
     
     .footer-content {
